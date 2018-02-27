@@ -22,7 +22,21 @@ namespace TDDSample.Web.Models.Rentals
          */
         public string Statement()
         {
-            return null;
+            var fee = RentalFee();
+
+            return $"{fee:N0} 円";
+        }
+
+        public int RentalFee()
+        {
+            var fee = 0;
+
+            foreach (var rental in _rentals)
+            {
+                fee += rental.RentalFee();
+            }
+
+            return fee;
         }
     }
 }

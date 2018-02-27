@@ -8,7 +8,12 @@
             DaysRented = daysRented;
         }
 
-        public Movie Movie { get; }
-        public int DaysRented { get; }
+        private Movie Movie { get; }
+        private int DaysRented { get; }
+
+        public int RentalFee()
+        {
+            return Movie.RentalFee(DaysRented);
+        }
     }
 }
