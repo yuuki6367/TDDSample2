@@ -4,6 +4,6 @@
     {
         Regular = 0,
         NewRelease = 1,
-        Childrens = 2
+        Children = 2
     }
 }
