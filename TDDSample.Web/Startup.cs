@@ -10,6 +10,7 @@ namespace TDDSample.Web
         // ReSharper disable once UnusedMember.Global
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession();
             services.AddMvc();
         }
 
@@ -26,6 +27,8 @@ namespace TDDSample.Web
             }
 
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseMvc(routes =>
             {
